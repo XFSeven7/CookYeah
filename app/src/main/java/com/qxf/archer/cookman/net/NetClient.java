@@ -6,7 +6,7 @@ import com.qxf.archer.cookman.constant.Constant;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
@@ -17,8 +17,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class NetClient {
-
-
 
     private static NetClient instance;
 
@@ -38,7 +36,7 @@ public class NetClient {
                 .baseUrl(Constant.BASE_URL)
                 .client(okHttpClient)
                 .addConverterFactory(GsonConverterFactory.create(gson))
-                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
 
     }

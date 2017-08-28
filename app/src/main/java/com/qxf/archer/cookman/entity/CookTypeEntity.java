@@ -211,4 +211,13 @@ public class CookTypeEntity {
             }
         }
     }
+
+    @Override
+    public String toString() {
+        return "CookTypeEntity{" +
+                "msg='" + msg + '\'' +
+                ", result=" + result +
+                ", retCode='" + retCode + '\'' +
+                '}';
+    }
 }

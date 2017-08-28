@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorYellow"
-    tools:context="com.qxf.archer.cookman.ui.SplashActivity">
+    tools:context="com.qxf.archer.cookman.ui.splash.SplashActivity">
 
     <TextView
         android:id="@+id/textView"

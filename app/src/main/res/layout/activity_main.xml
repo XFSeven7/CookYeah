@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.qxf.archer.cookman.MainActivity">
+    tools:context="com.qxf.archer.cookman.ui.main.MainActivity">
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
@@ -17,7 +17,8 @@
         android:id="@+id/tablayout"/>
 
     <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></android.support.v4.view.ViewPager>
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>
