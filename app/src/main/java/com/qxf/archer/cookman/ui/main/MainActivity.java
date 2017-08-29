@@ -3,6 +3,7 @@ package com.qxf.archer.cookman.ui.main;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 
@@ -13,7 +14,6 @@ import com.qxf.archer.cookman.entity.CookTypeEntity;
 import com.qxf.archer.cookman.entity.FragmentEntity;
 import com.qxf.archer.cookman.fragment.TypeFragment;
 import com.qxf.archer.cookman.utils.FragmentRepo;
-import com.tigerliang.tablayout.TabLayout;
 
 import java.util.ArrayList;
 
@@ -64,6 +64,8 @@ public class MainActivity extends MvpActivity<MainView, MainPresenter> implement
         }
     }
 
+    private static final String TAG = "MainActivity";
+
     @Override
     public void updateTab(ArrayList<CookTypeEntity.ResultBean.ChildsBeanX.ChildsBean.CategoryInfoBeanXX> categoryInfoBeanXXes) {
 
@@ -71,15 +73,20 @@ public class MainActivity extends MvpActivity<MainView, MainPresenter> implement
 
         for (int i = 0; i < categoryInfoBeanXXes.size(); i++) {
             TypeFragment typeFragment = new TypeFragment();
+            Bundle bundle = new Bundle();
+            bundle.putInt("color", i);
+            typeFragment.setArguments(bundle);
             // TODO: 2017/8/28 0028 设置参数
             fragmentEntities.add(new FragmentEntity(typeFragment, categoryInfoBeanXXes.get(i).getName(), i));
         }
 
         FragmentRepo.getInstance().replace(fragmentEntities);
 
-        tabLayout.setupWithViewPager(viewPager);
+        toolBar.setTitle("CookYeah");
 
         viewPager.setAdapter(adapter);
+        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
 
     }
 
