@@ -30,6 +30,7 @@ public class Constant {
                     "name varchar(255)" +
                 ")";
 
+    public static final String FRAGMENT_CID = "cid";
 
 
 }

@@ -14,14 +14,24 @@ public class FragmentEntity {
     private Fragment fragment;
     private String title;
     private int position;
+    private String cid;
 
     public FragmentEntity() {
     }
 
-    public FragmentEntity(Fragment fragment, String title, int position) {
+    public FragmentEntity(Fragment fragment, String title, int position, String cid) {
         this.fragment = fragment;
         this.title = title;
         this.position = position;
+        this.cid = cid;
+    }
+
+    public String getCid() {
+        return cid;
+    }
+
+    public void setCid(String cid) {
+        this.cid = cid;
     }
 
     public Fragment getFragment() {
