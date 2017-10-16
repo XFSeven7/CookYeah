@@ -13,6 +13,8 @@ public class Constant {
 
     public static final String BASE_URL = "http://apicloud.mob.com/v1/cook/";
 
+    public static final String TYPE_F = "category/query";
+
     public static final String TYPE_URL = "menu/search";
 
     public static final String SREARCH_URL = "menu/query";
@@ -28,6 +30,7 @@ public class Constant {
                     "name varchar(255)" +
                 ")";
 
+    public static final String FRAGMENT_CID = "cid";
 
 
 }
